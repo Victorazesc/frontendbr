@@ -1,0 +1,49 @@
+.box {
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+  padding: 15px;
+  transition: all 0.2s;
+  position: relative;
+  min-height: 200px;
+  padding-bottom: 40px;
+}
+
+.box:hover {
+  transform: scale(1.02);
+}
+
+h6 {
+  padding: 20px 0 !important;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.badge {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 0.77rem;
+  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box small {
+  padding-top: 15px;
+  color: #E5E5E5;
+  font-size: 12px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  gap: 5px;
+}

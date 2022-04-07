@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import compressedLogo from './assets/compressed-logo.png'
+import girl from './assets/girl.png'
+import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+
+  const [vacancies, setVacancies] = useState(0)
+  const [error, setError] = useState({error: false, message: ''})
+
+  useEffect(() => {
+    axios.get(`https://api.github.com/repos/frontendbr/vagas`)
+      .then(response => setVacancies(response.data.open_issues_count)).catch((error) => {
+        setError({error: true, message: 'O limite de busca foi execedido'})
+      })
+
+}, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="App-header">
+       <div className='container' style={{ flexDirection: "row" }}>
+        <div className='App-header-description'>
+          <img src={compressedLogo} alt="" />
+          <h4>Agregador de vagas para desenvolvedores Frontend</h4>
+          {/* <button className='btn btn-block'></button> */}
+          <Link className='btn btn-block' to="/vacancies">Ver {vacancies} Vagas</Link>
+        </div>
+        <div><img src={girl} alt="" /></div>
+       </div>
+     </div>
+     {/* <nav>
+        <Link to="/invoices">Invoices</Link> |{" "}
+        <Link to="/expenses">Expenses</Link>
+      </nav> */}
     </div>
   );
 }
 
 export default App;
+
