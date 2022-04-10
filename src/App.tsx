@@ -28,7 +28,7 @@ function App() {
           <h4>Agregador de vagas para desenvolvedores Frontend</h4>
           <Link className='btn btn-block' to="/vacancies">Ver {vacancies} Vagas</Link>
         </div>
-        <div><img className='img-lp' src={girl} alt="" /></div>
+        <div><img src={girl} alt="" /></div>
        </div>
      </div>
      {/* <nav>

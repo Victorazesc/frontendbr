@@ -209,7 +209,7 @@
 
 
     return (
-      <main style={{ paddingTop: "5rem" }} className="page">
+      <main style={{ paddingTop: "1.5rem" }} className="page">
 
       <Modal
         isOpen={modalIsOpen}

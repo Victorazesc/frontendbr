@@ -101,8 +101,12 @@ body {
     background: #00FFB8;
     color: #111;
     border-radius: 0px;
+    box-shadow: 1px 1px 20px 1px #111;
   }
 
+  .App-header-description .btn:hover {
+    background: #09BC8A;
+  }
   .img-lp {
     width: 16rem;
     margin-left: 30px;
