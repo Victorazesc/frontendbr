@@ -67,7 +67,6 @@
     const [search, setSearch] = useState('')
     const [selectedLabels, setSelectedLabels] = useState([])
     const [key, setKey] = useState(0)
-    const [labelsInUrl, setLabelsInUrl] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false);
     const [vancancy, setVacancy] = useState(`
     
@@ -223,18 +222,6 @@
 <ReactMarkdown  >
   {vancancy}
 </ReactMarkdown>
-      {/* {vancancy} */}
-
-        {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form> */}
       </Modal>
 
         <div className='container'>
@@ -301,7 +288,7 @@
               </InfiniteScroll>
 
               :
-              <div className='page' style={{justifyContent: 'space-between', width:"-webkit-fill-available", height: "calc(100vh - 450px)"}}>
+              <div className='page not-found' style={{justifyContent: 'space-between', width:"-webkit-fill-available", height: "calc(100vh - 450px)"}}>
                 <h4 style={{width: '350px'}}>Nenhum resultado foi encontrado!</h4>
                 <img width="350px" src={notfound} alt="" />
               </div>

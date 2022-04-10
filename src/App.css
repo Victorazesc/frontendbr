@@ -77,9 +77,57 @@ body {
   font-family: 'Fira Code', monospace;
 }
 
+@media only screen and (max-width: 600px) {
+  .App-header-description {
+    padding: 20px;
+    width: auto !important;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    width: 1150px;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .App-header-description .btn {
+    position: fixed;
+    bottom: 0px;
+    background: #00FFB8;
+    color: #111;
+    border-radius: 0px;
+  }
+
+  .img-lp {
+    width: 16rem;
+    margin-left: 30px;
+  }
+
+  .container-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .custom-input {
+    width: 75% !important;
+  }
+
+  .page {
+    text-align: center;
+  }
+
+  .not-found {
+    flex-direction: column !important;
+  }
+}
 .container {
   width: 1150px;
   display: flex;
+  padding: 15px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -107,6 +155,8 @@ margin-bottom: 40px;
   align-items: center;
   width: 375px;
 }
+
+
 
 
   .App-logo {
@@ -138,11 +188,16 @@ margin-bottom: 40px;
   }
 }
 
+h1 a {
+  color: #00FFB8;
+  display: flex;
+}
+
 .btn {
   border: 5px solid #00FFB8;
 box-sizing: border-box;
 border-radius: 10px;
-padding: 15px 30px;
+padding: 20px 30px;
 background: transparent;
 color: #00FFB8;
 text-transform: uppercase;

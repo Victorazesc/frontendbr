@@ -26,10 +26,9 @@ function App() {
         <div className='App-header-description'>
           <img src={compressedLogo} alt="" />
           <h4>Agregador de vagas para desenvolvedores Frontend</h4>
-          {/* <button className='btn btn-block'></button> */}
           <Link className='btn btn-block' to="/vacancies">Ver {vacancies} Vagas</Link>
         </div>
-        <div><img src={girl} alt="" /></div>
+        <div><img className='img-lp' src={girl} alt="" /></div>
        </div>
      </div>
      {/* <nav>
